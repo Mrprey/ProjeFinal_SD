@@ -13,6 +13,22 @@ datas = [
         'preco': '9.00',
     },
     {
+        'nome': 'soja',
+        'preco': '4.00',
+    },
+        {
+        'nome': 'pimentao',
+        'preco': '4.00',
+    },
+            {
+        'nome': 'macarrao',
+        'preco': '4.00',
+    },
+            {
+        'nome': 'leite em pó',
+        'preco': '4.00',
+    },
+    {
         'nome': 'sal',
         'preco': '1.00',
     },

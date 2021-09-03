@@ -1,9 +1,29 @@
-# ProjeFinal_SD
-Projeto final da disciplina de Sistemas distribuidos
+<h1 align="center">
+  <p> Projeto Web Services: Sistema de consulta de produtos </p>
+</h1>
 
-Desenvolvido por Anderson da Conceição e Lívia Nascimento
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-instalações">Instalações</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-execução">Execução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-Projeto de uma plicação cliente e servidor usando Python, onde o servidor é uma API REST usando Flask.
 
-O Servidor conta com um pequeno conjunto de filmes no formato Json.
-O servidor contem algumas funcionalidades imolementadas com Get e Post.
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- <a href="https://www.python.org/">Python 3.9.4 </a>
+- <a href="https://flask.palletsprojects.com/en/2.0.x/"> Flask </a>
+
+## 💻 Instalações
+
+- $ pip install Flask
+
+## 🔖 execução
+- com o projeto já em seu editor (caso vs code), dar um run no arquivo do server e clients e GG! tá rodando
+
+
+
+
+## 🙏 Feito com carinho.

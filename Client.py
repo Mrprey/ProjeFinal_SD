@@ -1,31 +1,27 @@
-from flask import jsonify
+# from flask import jsonify
 import requests
 
 def wellcome_API(link):
     response = requests.get(link)
     return response.text
 
-def all_movies(link):
+def all_itens(link):
     response = requests.get(link)
     return response.json()
 
-def post_movie(link, name, duration):
-    payload = {'title':name, 'duration':duration}
+def post_iten(link, name, price):
+    payload = {'nome':name, 'preco':price}
     response = requests.post(link, json = payload)
     print(response.url)
     return response.json()
 
-def find_movie(link, id):
+def find_iten(link, id):
     try:
         response = requests.get(link+'/'+id)
         return response.json()
     except:
-        return "Filme não encontrado"
+        return "Item não disponivel em estoque"
 
 
 
-#if __name__ == "__main__":
-    #print(wellcome_API('http://127.0.0.1:5000/datas/'))
-    #print(find_movie('http://127.0.0.1:5000/datas', "4"))
-    #print(post_movie('http://127.0.0.1:5000/datas'))
-    #print(all_movies('http://127.0.0.1:5000/datas'))
+

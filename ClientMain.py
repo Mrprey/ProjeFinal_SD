@@ -2,11 +2,11 @@ import Client
 
 def options():
     print('-'*29)
-    print('|1 - tela inicial           |\n'
-          '|2 - Todos os filmes        |\n'
-          '|3 - buscar filme especifico|\n'
-          '|4 - adicionar filme        |\n'
-          '|5 - fechar aplicação       |')
+    print('|1 - Tela inicial              |\n'
+          '|2 - Todos produtos guardados  |\n'
+          '|3 - Buscar produto  especifico|\n'
+          '|4 - Adicionar produto         |\n'
+          '|5 - Fechar aplicação          |')
     print('-' * 29)
     action = int(input('Selecione um número: '))
 
@@ -27,21 +27,21 @@ if __name__ == "__main__":
             print(message)
 
         elif action == 2:
-            print('Lista de todos os filmes')
-            message = Client.all_movies(link+"/datas")
+            print('Lista de todos os produtos disponiveis em estoque')
+            message = Client.all_itens(link+"/datas")
             print(message)
 
         elif action == 3:
-            message = Client.find_movie(link+"/datas", input('Número do filme: '))
-            print('Filme escolhido')
+            message = Client.find_iten(link+"/datas", input('Numeração do item a ser verificado no sistema: '))
+            print('produto localizado')
             print(message)
 
         elif action == 4:
-            name = input("Nome do filme: ")
-            time = int(input('Duração do filme: '))
-            duration = str(time//60)+"h "+str(time%60)+"m "
-            message = Client.post_movie(link+"/datas", name, duration)
-            print('Filme adicionado')
+            name = input("Digite nome do item a ser adicionado no sistema: ")
+            preco = float(input('Informe preço do item a ser cadastrado: '))
+            message = Client.post_iten(link+"/datas", name, preco)
+
+            print('Produto Cadastrado com sucesso!')
             print(message)
 
     print("Obrigado por usar nossos programas")

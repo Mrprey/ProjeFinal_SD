@@ -5,21 +5,29 @@ app = Flask(__name__)
 
 datas = [
     {
-        "title": 'Capitão América 2: O Soldado Invernal',
-        "duration": '2h 16m'
+        "nome": 'Arroz',
+        "preco": '6.00'
     },
     {
-        'title': 'The Avengers: Os Vingadores',
-        'duration': '2h 24m',
+        'nome': 'óleo',
+        'preco': '9.00',
     },
     {
-        'title': 'Capitão América: Soldado Invernal',
-        'duration': '3h 2m',
+        'nome': 'sal',
+        'preco': '1.00',
     },
     {
-        'title': 'Homem de Ferro',
-        'duration': '2h 6m',
+        'nome': 'azeite',
+        'preco': '13.00',
     },
+        {
+        'nome': 'vinagre',
+        'preco': '4.00',
+    },
+        {
+        'nome': 'miojo',
+        'preco': '1.40',
+    }
 ]
 
 
@@ -42,12 +50,12 @@ def get_data(data_id):
 
 
 @app.route('/datas', methods=['POST'])
-def post_movie():
-    if not request.json or not 'title' in request.json:
+def post_iten():
+    if not request.json or not 'nome' in request.json:
         abort(400)
     message = {
-        'title': request.json['title'],
-        'duration': request.json['duration'],
+        'nome': request.json['nome'],
+        'preco': request.json['preco'],
     }
 
     datas.append(message)
